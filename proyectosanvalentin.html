@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San ValentÃ­n</title>
+    <link rel="stylesheet" href="body.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/b8/98/25/b898251a1c6bfcc8c1286fdb72e997b8.gif');
+            background-size: cover;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+            display: flex;
+            align-items: center;
+        }
+        .gif-container {
+            margin-right: 20px;
+        }
+        .gif-container img {
+            width: 100px;
+            height: auto;
+        }
+        .text-container {
+            flex: 1;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .btn-si, .btn-no {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn-si {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .btn-no {
+            background-color: #ccc;
+            color: black;
+        }
+        .btn-no:hover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="gif-container">
+            <td><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2t3aTJiem1hcHhqc2cyNGxyNm1vNXNic3p0bHJtbnhseThsdWdoNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cQSjIBgUC2NbMKEm9q/giphy.gif" onclick="window.open('original.jpg');" width="100" height="100" alt="Kuromi"></td>
+        </div>
+        <div class="text-container">
+            <h1>Â¿Quieres ser mi San ValentÃ­n? ðŸ’–</h1>
+            <p>Eres la persona mÃ¡s especial para mÃ­ y me encantarÃ­a compartir este dÃ­a contigo mi princesa.</p>
+            <button class="btn-si" onclick="alert('Â¡SabÃ­a que dirÃ­as que sÃ­! ðŸ’•')">SÃ­</button>
+            <button class="btn-no" onclick="moverBoton(this)">No</button>
+        </div>
+    </div>
+    <script>
+        function moverBoton(boton) {
+            let x = Math.random() * (window.innerWidth - boton.clientWidth);
+            let y = Math.random() * (window.innerHeight - boton.clientHeight);
+            boton.style.position = "absolute";
+            boton.style.left = x + "px";
+            boton.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
